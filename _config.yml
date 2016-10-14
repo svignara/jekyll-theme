@@ -1,0 +1,29 @@
+title: DCM Styleguide
+email: ebusiness@bmo.com
+description: > # this means to ignore newlines until "baseurl:"
+  Living breathing styleguide
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Sass settings
+sass:
+  sass_dir: styleguide-css
+
+# Build settings
+markdown: kramdown
+
+# Styleguide settings
+collections:
+  styleguide:
+    output: true
+
+# Sensible defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "styleguide"
+    values:
+      layout: "default"
+
+exclude: [ Gemfile, "Gemfile.lock", "*.gem", "*.gemspec", "README.md", "LICENSE.txt", ".gitignore" ]

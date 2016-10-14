@@ -1,0 +1,29 @@
+---
+layout: styleguide
+---
+
+<div class="container">
+
+  <!-- Styleguide header introducing the content -->
+  {% include styleguide/header.html %}  
+
+  <div class="row">
+
+    <!-- Styleguide aside navigation -->
+    <div class="col-md-3">
+      {% include styleguide/navigation.html %}  
+    </div>
+
+    <!-- Styleguide main content area -->
+    {% assign components = (site.styleguide | sort:"order")  %}
+    <div class="col-md-9">
+      {% for component in components %}
+        {% include styleguide/component.html
+          component = component
+        %}
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>
